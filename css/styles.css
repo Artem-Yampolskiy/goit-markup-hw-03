@@ -46,19 +46,19 @@ body {
   background: var(--text-color-white);
   border-bottom: 1px solid #ececec;
 }
-/* display: flex;
+.header-page .conteiner {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  align-items: center; 
-}*/
+}
 
 /* navigatsiya */
+
 .nav-list {
   display: flex;
-  outline: 2px solid tomato;
+  margin-left: 93px;
 }
 .item {
-  outline: 2px solid tomato;
+  display: block;
 }
 .nav-list .item:not(:last-child) {
   margin-right: 50px;
@@ -77,15 +77,22 @@ body {
 
 /* adresnaya */
 
-.address-header > .address-list {
-  display: flex;
-  outline: 2px solid tomato;
+.address-header {
+  margin-left: auto;
 }
-
-.adress-list .link {
-  display: inline-block;
+.address-list-up {
+  display: flex;
+}
+.address-list-up .link {
   padding-top: 32px;
   padding-bottom: 32px;
+}
+.address-list-up .item:not(:last-child) {
+  margin-right: 50px;
+}
+.address-list .link,
+.address-list-up .link {
+  display: block;
   color: var(--text-color-grey);
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -94,20 +101,18 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-
 .link:hover,
 .link:focus {
   color: var(--text-color-accent);
   font-style: normal;
 }
-/* .address-list .item:not(:last-child) {
-  margin-right: 50px; 
-}*/
 
 /* footer */
 
 .footer-page {
   background: var(--background-footer);
+}
+.footer-page > .conteiner {
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -127,7 +132,16 @@ body {
   color: var(--text-color-black);
   letter-spacing: 0.03em;
 }
-
+.underground .logo-web {
+  display: block;
+  margin-bottom: 20px;
+}
+.address-list .item:not(:last-child) {
+  margin-bottom: 9px;
+}
+.address-list .map {
+  color: #ffffff;
+}
 .footer-logo-studio {
   font-family: "Raleway", sans-serif;
   font-weight: bold;
@@ -148,7 +162,6 @@ body {
   padding-top: 200px;
   padding-bottom: 200px;
 }
-
 .hero-titel {
   font-weight: 900;
   font-size: 44px;
@@ -216,7 +229,6 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
 .working-list-img {
   display: flex;
   justify-content: space-between;
@@ -226,7 +238,6 @@ body {
   padding-bottom: 94px;
   background: var(--background-central-body);
 }
-
 .section-name {
   padding-bottom: 50px;
   color: var(--text-color-black);
@@ -280,14 +291,22 @@ body {
 .main-portfolio {
   background: var(--background-central-body);
 }
+.buttons {
+  padding-top: 94px;
+  padding-bottom: 50px;
+}
+.cards {
+  padding-bottom: 94px;
+}
 
 /* conteiner buttons */
 
-.conteiner > .btn-portfolio {
-  padding-top: 94px;
-  padding-bottom: 50px;
+.btn-portfolio {
   display: flex;
   justify-content: center;
+}
+.line-btns:not(:last-child) {
+  margin-right: 8px;
 }
 .btn-link {
   display: inline-block;
@@ -302,9 +321,6 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--text-color-black);
-}
-.btn-link:not(last-child) {
-  margin-left: 8px;
 }
 .btn-link:hover {
   background: #2196f3;
@@ -324,13 +340,10 @@ body {
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -30px;
-  margin-bottom: -30px;
-  padding-bottom: 94px;
+  margin: -15px;
 }
 .portfolio-card {
-  margin-right: 30px;
-  margin-bottom: 30px;
+  margin: 15px;
 }
 .portfolio-card .conteiner {
   background: #ffffff;
